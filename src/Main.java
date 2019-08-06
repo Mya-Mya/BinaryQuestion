@@ -1,6 +1,7 @@
 import basemodel.BigIntegerBinaryQuestion;
 import basemodel.BinaryQuestion;
 import model.ImagingNaturalNumberQuestion;
+import view.MainFrame;
 
 import java.math.BigInteger;
 import java.util.Scanner;
@@ -8,7 +9,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        debugHumanitically();
+        new MainFrame();
         return;
     }
     public static void debugHumanitically(){

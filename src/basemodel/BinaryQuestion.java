@@ -14,6 +14,7 @@ abstract public class BinaryQuestion {
     }
     public void addBinaryQuestionListener(BinaryQuestionListener l){
         listenerList.add(l);
+        fireListeners();
     }
 
     protected BQStatus status=BQStatus.Questioning;

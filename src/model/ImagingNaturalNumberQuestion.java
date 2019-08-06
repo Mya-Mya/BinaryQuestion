@@ -24,6 +24,7 @@ public class ImagingNaturalNumberQuestion extends BinaryQuestion {
                 //[oldRough, rough-1]範囲内に答えがある
                 step=1;
                 detailedQuestion=new BigIntegerBinaryQuestion(oldRough,rough.subtract(BigInteger.ONE));
+                status=detailedQuestion.getStatus();
             }
         }else{
             detailedQuestion.answer(b);
