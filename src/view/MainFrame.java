@@ -4,6 +4,7 @@ import basemodel.BinaryQuestion;
 import basemodel.BinaryQuestionListener;
 import model.HiraganaQuestion;
 import model.ImagingNaturalNumberQuestion;
+import model.MomentQuestion;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,12 +16,12 @@ import java.awt.event.KeyListener;
 public class MainFrame extends JFrame implements ActionListener, BinaryQuestionListener, KeyListener {
     private BinaryQuestion questionModel;
     private void createNewQuestion(){
-        questionModel=new HiraganaQuestion(4);
+        questionModel=new MomentQuestion();
         questionModel.addBinaryQuestionListener(this);
     }
 
     public static Font smallFont=new Font("メイリオ",Font.BOLD,28);
-    public static Font bigFont=new Font("メイリオ",Font.BOLD,74);
+    public static Font bigFont=new Font("メイリオ",Font.BOLD,54);
     public static Color blue=new Color(62, 163, 220);
     public static Color black=new Color(33, 34, 35);
     public static Color red=new Color(191, 54, 72);
