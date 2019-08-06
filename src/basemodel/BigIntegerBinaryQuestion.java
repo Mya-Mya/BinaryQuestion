@@ -45,6 +45,7 @@ public class BigIntegerBinaryQuestion extends BinaryQuestion {
     @Override
     public void undo() {
         history.remove(getNowHistory());
+        status=BQStatus.Questioning;
         fireListeners();
     }
 
