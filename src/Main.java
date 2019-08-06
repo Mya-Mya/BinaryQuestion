@@ -12,14 +12,15 @@ public class Main {
             String answer=new Scanner(System.in).nextLine();
             if(answer.equals("y")){
                 q.answer(true);
-            }if(answer.equals("u")){
-                if(q.canUndo())q.undo();
-            }else{
+            }
+            if(answer.equals("n")){
                 q.answer(false);
             }
-
+            if(answer.equals("u")){
+                if(q.canUndo())q.undo();
+            }
         }
-        System.out.println("わかったぞ");
+        System.out.println("Detected");
         showThesis(q);
         return;
     }

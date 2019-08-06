@@ -76,5 +76,16 @@ public class IntegerBinaryQuestion extends BinaryQuestion {
         public int min;
         public int mid;
         public int max;
+
+        @Override
+        public String toString() {
+            return"min="+min+" mid="+mid+" max="+max;
+        }
+    }
+
+    @Override
+    public String toString() {
+        IBQHistory now=getNowHistory();
+        return "("+Integer.toString(now.min)+","+Integer.toString(now.max)+")";
     }
 }

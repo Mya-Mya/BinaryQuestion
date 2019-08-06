@@ -36,4 +36,9 @@ abstract public class BinaryQuestion {
     public abstract String getThesis1();
     public abstract String getThesis2();
     public abstract String getThesis3();
+
+    @Override
+    public String toString() {
+        return getThesis1()+getThesis2()+getThesis3();
+    }
 }
