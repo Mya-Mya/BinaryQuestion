@@ -1,4 +1,4 @@
-package model;
+package basemodel;
 
 public interface BinaryQuestionListener {
     void questionChanged();

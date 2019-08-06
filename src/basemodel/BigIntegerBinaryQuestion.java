@@ -1,33 +1,33 @@
-package model;
+package basemodel;
 
 import com.sun.org.apache.xalan.internal.xsltc.compiler.Constants;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LongBinaryQuestion extends BinaryQuestion {
-    private List<LBQHistory> history=new ArrayList<>();
+public class BigIntegerBinaryQuestion extends BinaryQuestion {
+    private List<BIBQHistory> history=new ArrayList<>();
 
-    private LBQHistory getNowHistory(){
+    private BIBQHistory getNowHistory(){
         if(history.isEmpty())return null;
         return history.get(history.size()-1);
     }
-
-    public LongBinaryQuestion(int min, int max){
-        history.add(new LBQHistory(min,max));
+    public BigIntegerBinaryQuestion(BigInteger min,BigInteger max){
+        history.add(new BIBQHistory(min,max));
         fireListeners();
     }
 
     @Override
     protected void answer1(boolean b) {
-        LBQHistory nowHistory=getNowHistory();
-        LBQHistory newHistory;
+        BIBQHistory nowHistory=getNowHistory();
+        BIBQHistory newHistory;
         if(b){
-            newHistory=new LBQHistory(nowHistory.mid,nowHistory.max);
+            newHistory=new BIBQHistory(nowHistory.mid,nowHistory.max);
         }else{
-            newHistory=new LBQHistory(nowHistory.min,nowHistory.mid-1);
+            newHistory=new BIBQHistory(nowHistory.min,nowHistory.mid.subtract(BigInteger.ONE));
         }
-        if(newHistory.max==newHistory.min){
+        if(newHistory.min.equals(newHistory.max)){
             status=BQStatus.Detected;
         }
         history.add(newHistory);
@@ -40,19 +40,19 @@ public class LongBinaryQuestion extends BinaryQuestion {
     }
 
     @Override
-    protected void undo1() {
-        history.remove(history.size()-1);
+    public void undo() {
+        history.remove(getNowHistory());
         fireListeners();
     }
 
     @Override
     public String getThesis1() {
-        return"定数は";
+        return "定数は";
     }
 
     @Override
     public String getThesis2() {
-        return Integer.toString(getNowHistory().mid);
+        return getNowHistory().mid.toString();
     }
 
     @Override
@@ -66,26 +66,25 @@ public class LongBinaryQuestion extends BinaryQuestion {
         return Constants.EMPTYSTRING;
     }
 
-
-    private class LBQHistory {
-        public LBQHistory(long min, int max){
+    private static final BigInteger TWO=BigInteger.valueOf(2);
+    private class BIBQHistory{
+        public BIBQHistory(BigInteger min,BigInteger max){
             this.min=min;
             this.max=max;
-            this.mid= (int) Math.ceil((double)(min+max)/(double)2);
+            this.mid=min.add(max).add(BigInteger.ONE).divide(TWO);
         }
-        public int min;
-        public int mid;
-        public int max;
+        public BigInteger min;
+        public BigInteger mid;
+        public BigInteger max;
 
         @Override
         public String toString() {
             return"min="+min+" mid="+mid+" max="+max;
         }
     }
-
     @Override
     public String toString() {
-        LBQHistory now=getNowHistory();
-        return "("+Integer.toString(now.min)+","+Integer.toString(now.max)+")";
+        BIBQHistory now=getNowHistory();
+        return "("+now.min.toString()+","+now.max.toString()+")";
     }
 }
