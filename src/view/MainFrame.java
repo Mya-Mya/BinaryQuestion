@@ -18,7 +18,7 @@ public class MainFrame extends JFrame implements ActionListener, BinaryQuestionL
         questionModel.addBinaryQuestionListener(this);
     }
 
-    public static Font smallFont=new Font("メイリオ",Font.BOLD,32);
+    public static Font smallFont=new Font("メイリオ",Font.BOLD,28);
     public static Font bigFont=new Font("メイリオ",Font.BOLD,74);
     public static Color blue=new Color(62, 163, 220);
     public static Color black=new Color(33, 34, 35);
@@ -38,7 +38,7 @@ public class MainFrame extends JFrame implements ActionListener, BinaryQuestionL
     public MainFrame(){
         super("BinaryQuestion");
 
-        setPreferredSize(new Dimension(700,400));
+        setPreferredSize(new Dimension(800,400));
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setFocusable(true);
         addKeyListener(this);
