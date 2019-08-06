@@ -230,10 +230,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="variable&#9;FILE&#9;jar://F:/java/8/jre/lib/rt.jar!/javax/lang/model/element/VariableElement.class&#10;Void&#9;PSI&#9;JAVA://java.lang.Void&#10;emptyString&#9;PSI&#9;JAVA://com.sun.org.apache.xalan.internal.xsltc.compiler.Constants#EMPTYSTRING&#10;NullString&#9;PSI&#9;JAVA://sun.plugin.com.NullString&#10;ArrayList&#9;PSI&#9;JAVA://java.util.ArrayList" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565108848579" />
-    <property name="project.structure.last.edited" value="SDKs" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565109283178" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
