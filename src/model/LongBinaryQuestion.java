@@ -5,27 +5,27 @@ import com.sun.org.apache.xalan.internal.xsltc.compiler.Constants;
 import java.util.ArrayList;
 import java.util.List;
 
-public class IntegerBinaryQuestion extends BinaryQuestion {
-    private List<IBQHistory> history=new ArrayList<>();
+public class LongBinaryQuestion extends BinaryQuestion {
+    private List<LBQHistory> history=new ArrayList<>();
 
-    private IBQHistory getNowHistory(){
+    private LBQHistory getNowHistory(){
         if(history.isEmpty())return null;
         return history.get(history.size()-1);
     }
 
-    public IntegerBinaryQuestion(int min,int max){
-        history.add(new IBQHistory(min,max));
+    public LongBinaryQuestion(int min, int max){
+        history.add(new LBQHistory(min,max));
         fireListeners();
     }
 
     @Override
     protected void answer1(boolean b) {
-        IBQHistory nowHistory=getNowHistory();
-        IBQHistory newHistory;
+        LBQHistory nowHistory=getNowHistory();
+        LBQHistory newHistory;
         if(b){
-            newHistory=new IBQHistory(nowHistory.mid,nowHistory.max);
+            newHistory=new LBQHistory(nowHistory.mid,nowHistory.max);
         }else{
-            newHistory=new IBQHistory(nowHistory.min,nowHistory.mid-1);
+            newHistory=new LBQHistory(nowHistory.min,nowHistory.mid-1);
         }
         if(newHistory.max==newHistory.min){
             status=BQStatus.Detected;
@@ -67,11 +67,11 @@ public class IntegerBinaryQuestion extends BinaryQuestion {
     }
 
 
-    private class IBQHistory{
-        public IBQHistory(int min,int max){
+    private class LBQHistory {
+        public LBQHistory(long min, int max){
             this.min=min;
             this.max=max;
-            this.mid=(min+max)/2;
+            this.mid= (int) Math.ceil((double)(min+max)/(double)2);
         }
         public int min;
         public int mid;
@@ -85,7 +85,7 @@ public class IntegerBinaryQuestion extends BinaryQuestion {
 
     @Override
     public String toString() {
-        IBQHistory now=getNowHistory();
+        LBQHistory now=getNowHistory();
         return "("+Integer.toString(now.min)+","+Integer.toString(now.max)+")";
     }
 }
