@@ -5,6 +5,8 @@ import basemodel.BinaryQuestion;
 import com.sun.org.apache.xalan.internal.xsltc.compiler.Constants;
 
 import java.math.BigInteger;
+import java.text.NumberFormat;
+import java.util.Arrays;
 
 public class ImagingNaturalNumberQuestion extends BinaryQuestion {
     private BigInteger oldRough=BigInteger.ZERO;
@@ -60,13 +62,21 @@ public class ImagingNaturalNumberQuestion extends BinaryQuestion {
 
     @Override
     public String getThesis2() {
-        String out;
+        String raw;
         if(step==0){
-            out=rough.toString();
+            raw=rough.toString();
         }else{
-            out=detailedQuestion.getThesis2();
+            raw=detailedQuestion.getThesis2();
         }
-        return String.format("%,d",out);
+        StringBuilder out=new StringBuilder();
+        char[]chars=raw.toCharArray();
+        for(int i=0;i<chars.length;i++){
+            int ii=chars.length-i-1;
+            if(i!=0&&i%3==0)out.append(",");
+            out.append(chars[ii]);
+        }
+        out.reverse();
+        return out.toString();
     }
 
     @Override

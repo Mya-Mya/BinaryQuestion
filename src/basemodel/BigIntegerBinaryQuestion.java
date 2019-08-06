@@ -9,7 +9,7 @@ import java.util.List;
 public class BigIntegerBinaryQuestion extends BinaryQuestion {
     private List<BIBQHistory> history=new ArrayList<>();
 
-    private BIBQHistory getNowHistory(){
+    public BIBQHistory getNowHistory(){
         if(history.isEmpty())return null;
         return history.get(history.size()-1);
     }
@@ -71,7 +71,7 @@ public class BigIntegerBinaryQuestion extends BinaryQuestion {
     }
 
     private static final BigInteger TWO=BigInteger.valueOf(2);
-    private class BIBQHistory{
+    public class BIBQHistory{
         public BIBQHistory(BigInteger min,BigInteger max){
             if(max.compareTo(min)==-1)throw new IllegalArgumentException("min>max");
             this.min=min;
@@ -90,6 +90,6 @@ public class BigIntegerBinaryQuestion extends BinaryQuestion {
     @Override
     public String toString() {
         BIBQHistory now=getNowHistory();
-        return "("+now.min.toString()+","+now.max.toString()+")";
+        return "["+now.min.toString()+","+now.max.toString()+"]";
     }
 }

@@ -2,6 +2,7 @@ package view;
 
 import basemodel.BinaryQuestion;
 import basemodel.BinaryQuestionListener;
+import model.HiraganaQuestion;
 import model.ImagingNaturalNumberQuestion;
 
 import javax.swing.*;
@@ -14,7 +15,7 @@ import java.awt.event.KeyListener;
 public class MainFrame extends JFrame implements ActionListener, BinaryQuestionListener, KeyListener {
     private BinaryQuestion questionModel;
     private void createNewQuestion(){
-        questionModel=new ImagingNaturalNumberQuestion();
+        questionModel=new HiraganaQuestion(4);
         questionModel.addBinaryQuestionListener(this);
     }
 
@@ -49,7 +50,7 @@ public class MainFrame extends JFrame implements ActionListener, BinaryQuestionL
         lState.setHorizontalAlignment(SwingConstants.CENTER);
 
         JPanel pThesis=new JPanel();
-        pThesis.setLayout(new FlowLayout(FlowLayout.CENTER));
+        pThesis.setLayout(new BoxLayout(pThesis,BoxLayout.Y_AXIS));
         lThesis1=new JLabel();
         lThesis1.setFont(smallFont);
         lThesis1.setHorizontalAlignment(SwingConstants.RIGHT);
@@ -117,13 +118,13 @@ public class MainFrame extends JFrame implements ActionListener, BinaryQuestionL
             if(questionModel.canUndo())questionModel.undo();
         }
         if(source==bNEXT){
-            questionModel=new ImagingNaturalNumberQuestion();
-            questionModel.addBinaryQuestionListener(this);
+            createNewQuestion();
         }
     }
 
     @Override
     public void questionChanged() {
+        System.out.println(questionModel.toString());
         lThesis1.setText(questionModel.getThesis1());
         lThesis2.setText(questionModel.getThesis2());
         lThesis3.setText(questionModel.getThesis3());
@@ -137,7 +138,7 @@ public class MainFrame extends JFrame implements ActionListener, BinaryQuestionL
                 lThesis1.setForeground(black);
                 lThesis3.setForeground(black);
                 lState.setForeground(black);
-                lState.setText("- 質問中 -");
+                lState.setText(questionModel.toString());
                 break;
             case Detected:
                 bYES.setEnabled(false);
