@@ -29,7 +29,7 @@ public class MomentQuestion extends BigIntegerBinaryQuestion {
         sb.append(".");
         sb.append(target.get(Calendar.DATE));
         sb.append(" ");
-        sb.append(target.get(Calendar.HOUR));
+        sb.append(target.get(Calendar.HOUR_OF_DAY));
         sb.append(":");
         sb.append(target.get(Calendar.MINUTE));
         sb.append(":");

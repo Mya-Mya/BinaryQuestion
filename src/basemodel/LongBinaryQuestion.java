@@ -86,6 +86,6 @@ public class LongBinaryQuestion extends BinaryQuestion {
     @Override
     public String toString() {
         LBQHistory now=getNowHistory();
-        return "["+Long.toString(now.min)+","+Long.toString(now.max)+"]";
+        return "["+Long.toString(now.min)+","+Long.toString(now.max)+"] "+history.size()+"回目の質問";
     }
 }

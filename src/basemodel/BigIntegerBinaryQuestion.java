@@ -90,6 +90,6 @@ public class BigIntegerBinaryQuestion extends BinaryQuestion {
     @Override
     public String toString() {
         BIBQHistory now=getNowHistory();
-        return "["+now.min.toString()+","+now.max.toString()+"]";
+        return "["+now.min.toString()+","+now.max.toString()+"] "+history.size()+"回目の質問";
     }
 }
