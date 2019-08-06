@@ -48,6 +48,7 @@ public class ImagingNaturalNumberQuestion extends BinaryQuestion {
             return;
         }else{
             detailedQuestion.undo();
+            status=BQStatus.Questioning;
             fireListeners();
         }
     }

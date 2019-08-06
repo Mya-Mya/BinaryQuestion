@@ -56,7 +56,7 @@ public class MainFrame extends JFrame implements ActionListener, BinaryQuestionL
 
         JPanel pButtons =new JPanel();
         pButtons.setPreferredSize(new Dimension(700,200));
-        pButtons.setLayout(new FlowLayout(FlowLayout.CENTER));
+        pButtons.setLayout(new BoxLayout(pButtons,BoxLayout.X_AXIS));
         bYES=new JButton("YES");
         bYES.setFont(mainFont);
         bYES.setActionCommand("YES");
@@ -115,7 +115,7 @@ public class MainFrame extends JFrame implements ActionListener, BinaryQuestionL
     public void questionChanged() {
         lThesis1.setText(questionModel.getThesis1());
         lThesis2.setText(questionModel.getThesis2());
-        lThesis2.setText(questionModel.getThesis3());
+        lThesis3.setText(questionModel.getThesis3());
         switch (questionModel.getStatus()){
             case Questioning:
                 bYES.setEnabled(true);
