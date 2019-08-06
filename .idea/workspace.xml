@@ -43,35 +43,35 @@
         <counts>
           <entry key="class" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="44" />
+          <entry key="java" value="55" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="44" />
+          <entry key="JAVA" value="55" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="7010" />
+          <entry key="java" value="7061" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7010" />
+          <entry key="JAVA" value="7061" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/ImagingNaturalNumberQuestion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="332">
+              <caret line="68" column="26" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1014#1015#0" expanded="true" />
@@ -81,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/MainFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="163" selection-start-line="163" selection-end-line="163" />
+            <state relative-caret-position="2825">
+              <caret line="108" selection-start-line="108" selection-end-line="108" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -135,9 +135,9 @@
         <option value="$PROJECT_DIR$/src/model/BigIntegerBinaryQuestion.java" />
         <option value="$PROJECT_DIR$/src/basemodel/BinaryQuestion.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/model/ImagingNaturalNumberQuestion.java" />
         <option value="$PROJECT_DIR$/src/basemodel/BigIntegerBinaryQuestion.java" />
         <option value="$PROJECT_DIR$/src/view/MainFrame.java" />
+        <option value="$PROJECT_DIR$/src/model/ImagingNaturalNumberQuestion.java" />
       </list>
     </option>
   </component>
@@ -193,7 +193,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="Void&#9;PSI&#9;JAVA://java.lang.Void&#10;emptyString&#9;PSI&#9;JAVA://com.sun.org.apache.xalan.internal.xsltc.compiler.Constants#EMPTYSTRING&#10;NullString&#9;PSI&#9;JAVA://sun.plugin.com.NullString&#10;ArrayList&#9;PSI&#9;JAVA://java.util.ArrayList" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565101540933" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565101938902" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -258,7 +258,7 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" sideWeight="0.50180507" side_tool="true" weight="0.18176973" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49819493" visible="true" weight="0.18176973" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49819493" visible="true" weight="0.18176973" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" sideWeight="0.49946696" weight="0.329718" />
@@ -267,7 +267,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" visible="true" weight="0.25813448" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" visible="true" weight="0.28958786" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.329718" />
@@ -283,18 +283,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/view/MainFrame.java</url>
-          <line>162</line>
-          <properties />
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -361,13 +349,6 @@
             <element signature="e#15586#15587#0" expanded="true" />
             <element signature="e#15631#15632#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/java/8/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="2938" column="24" selection-start-line="2938" selection-start-column="11" selection-end-line="2938" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -513,18 +494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/ImagingNaturalNumberQuestion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1014#1015#0" expanded="true" />
-            <element signature="e#1042#1043#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://F:/java/8/src.zip!/java/awt/event/KeyListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-234">
@@ -557,59 +526,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://F:/java/8/src.zip!/java/awt/Container.java">
+    <entry file="jar://F:/java/8/src.zip!/java/awt/EventDispatchThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="2310" selection-start-line="2310" selection-end-line="2310" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/java/8/src.zip!/java/awt/Window.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="2746" selection-start-line="2746" selection-end-line="2746" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://F:/java/8/src.zip!/java/awt/Component.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="4711" selection-start-line="4711" selection-end-line="4711" />
+        <state relative-caret-position="125">
+          <caret line="204" selection-start-line="204" selection-end-line="204" />
           <folding>
-            <element signature="e#39524#39525#0" expanded="true" />
-            <element signature="e#39551#39552#0" expanded="true" />
-            <element signature="e#167794#167795#0" expanded="true" />
+            <element signature="e#2191#2192#0" expanded="true" />
+            <element signature="e#2234#2235#0" expanded="true" />
+            <element signature="e#2433#2434#0" expanded="true" />
+            <element signature="e#2487#2488#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://F:/java/8/src.zip!/java/security/ProtectionDomain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
+        <state relative-caret-position="125">
           <caret line="79" selection-start-line="79" selection-end-line="79" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://F:/java/8/src.zip!/java/awt/EventDispatchThread.java">
+    <entry file="jar://F:/java/8/src.zip!/java/security/AccessController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="205" selection-start-line="205" selection-end-line="205" />
+        <state relative-caret-position="125">
+          <caret line="370" column="31" selection-start-line="370" selection-start-column="31" selection-end-line="370" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="jar://F:/java/8/src.zip!/java/awt/EventQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="737" selection-start-line="737" selection-end-line="737" />
+        <state relative-caret-position="125">
+          <caret line="759" selection-start-line="759" selection-end-line="759" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/java/8/src.zip!/java/awt/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="2745" selection-start-line="2745" selection-end-line="2745" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/java/8/src.zip!/java/awt/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="4710" selection-start-line="4710" selection-end-line="4710" />
+          <folding>
+            <element signature="e#39524#39525#0" expanded="true" />
+            <element signature="e#39551#39552#0" expanded="true" />
+            <element signature="e#167830#167831#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/java/8/src.zip!/java/awt/Container.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1115">
+          <caret line="2294" selection-start-line="2294" selection-end-line="2294" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/MainFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="163" selection-start-line="163" selection-end-line="163" />
+        <state relative-caret-position="2825">
+          <caret line="108" selection-start-line="108" selection-end-line="108" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/java/8/src.zip!/java/lang/Appendable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-420">
+          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/java/8/src.zip!/java/util/Formatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="1851" column="18" lean-forward="true" selection-start-line="1851" selection-start-column="18" selection-end-line="1851" selection-end-column="18" />
+          <folding>
+            <element signature="e#101735#101736#0" expanded="true" />
+            <element signature="e#101781#101782#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://F:/java/8/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="2939" column="55" lean-forward="true" selection-start-line="2939" selection-start-column="55" selection-end-line="2939" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/ImagingNaturalNumberQuestion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="68" column="26" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="e#1042#1043#0" expanded="true" />
           </folding>
         </state>
       </provider>

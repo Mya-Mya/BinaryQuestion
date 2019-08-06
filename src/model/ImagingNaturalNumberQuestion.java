@@ -60,11 +60,13 @@ public class ImagingNaturalNumberQuestion extends BinaryQuestion {
 
     @Override
     public String getThesis2() {
+        String out;
         if(step==0){
-            return rough.toString();
+            out=rough.toString();
         }else{
-            return detailedQuestion.getThesis2();
+            out=detailedQuestion.getThesis2();
         }
+        return String.format("%,d",out);
     }
 
     @Override
