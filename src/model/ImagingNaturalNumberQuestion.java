@@ -7,7 +7,7 @@ import com.sun.org.apache.xalan.internal.xsltc.compiler.Constants;
 import java.math.BigInteger;
 
 public class ImagingNaturalNumberQuestion extends BinaryQuestion {
-    private BigInteger oldRough=BigInteger.ONE;
+    private BigInteger oldRough=BigInteger.ZERO;
     private BigInteger rough=BigInteger.ONE;
     private BigIntegerBinaryQuestion detailedQuestion;
     private static BigInteger TWO=BigInteger.valueOf(2);
@@ -27,6 +27,7 @@ public class ImagingNaturalNumberQuestion extends BinaryQuestion {
             }
         }else{
             detailedQuestion.answer(b);
+            status=detailedQuestion.getStatus();
         }
         fireListeners();
     }

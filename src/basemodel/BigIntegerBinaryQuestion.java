@@ -14,7 +14,14 @@ public class BigIntegerBinaryQuestion extends BinaryQuestion {
         return history.get(history.size()-1);
     }
     public BigIntegerBinaryQuestion(BigInteger min,BigInteger max){
-        history.add(new BIBQHistory(min,max));
+        addNewHistory(new BIBQHistory(min, max));
+    }
+
+    private void addNewHistory(BIBQHistory h){
+        history.add(h);
+        if(h.min.equals(h.max)){
+            status=BQStatus.Detected;
+        }
         fireListeners();
     }
 
@@ -27,11 +34,7 @@ public class BigIntegerBinaryQuestion extends BinaryQuestion {
         }else{
             newHistory=new BIBQHistory(nowHistory.min,nowHistory.mid.subtract(BigInteger.ONE));
         }
-        if(newHistory.min.equals(newHistory.max)){
-            status=BQStatus.Detected;
-        }
-        history.add(newHistory);
-        fireListeners();
+        addNewHistory(newHistory);
     }
 
     @Override
@@ -69,6 +72,7 @@ public class BigIntegerBinaryQuestion extends BinaryQuestion {
     private static final BigInteger TWO=BigInteger.valueOf(2);
     private class BIBQHistory{
         public BIBQHistory(BigInteger min,BigInteger max){
+            if(max.compareTo(min)==-1)throw new IllegalArgumentException("min>max");
             this.min=min;
             this.max=max;
             this.mid=min.add(max).add(BigInteger.ONE).divide(TWO);
